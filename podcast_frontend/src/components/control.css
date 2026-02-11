@@ -1,0 +1,58 @@
+.new-podcast-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.new-podcast-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--text-dim);
+  transform: translateX(5px);
+}
+
+.sidebar-divider {
+  height: 1px;
+  background: var(--border-color);
+  margin: 20px 0;
+}
+
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.sidebar-label {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sidebar-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  padding: 8px 0;
+  cursor: pointer;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+.sidebar-action-btn:hover {
+  opacity: 1;
+  color: var(--accent);
+  transform: translateX(3px);
+}

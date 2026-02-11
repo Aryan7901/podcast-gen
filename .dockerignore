@@ -1,0 +1,10 @@
+__pycache__/
+.venv/
+.env
+.git/
+*.wav
+*.mp3
+node_modules/
+custom_models
+podcast_train.ipynb
+podcast_frontend
