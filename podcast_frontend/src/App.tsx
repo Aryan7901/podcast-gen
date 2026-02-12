@@ -6,8 +6,8 @@ import {
   Loader2,
   RefreshCcw,
   X,
-  Settings,
-  ChevronUp,
+  // Settings,
+  // ChevronUp,
 } from "lucide-react";
 import { useAudioQueue } from "./hooks/useAudioQueue";
 import { ChatFeed } from "./components/ChatFeed";
@@ -30,7 +30,7 @@ const App: React.FC = () => {
     status,
     text,
   } = useBroadcast(pushAudio);
-  const [showSettings, setShowSettings] = useState<boolean>(false);
+  // const [showSettings, setShowSettings] = useState<boolean>(false);
   const isPlaying = useRef<boolean>(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
   const scrollToBottom = () =>
