@@ -21,7 +21,7 @@ export const useBroadcast = (pushAudio: (chunk: string) => void) => {
     if (image) body.append("image", image);
 
     try {
-      const resp = await fetch("http://aryan-api.771727.xyz/podcast-gen/generate", {
+      const resp = await fetch("https://aryan-api.771727.xyz/podcast-gen/generate", {
         method: "POST",
         body,
       });
