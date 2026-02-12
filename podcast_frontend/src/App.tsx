@@ -6,8 +6,8 @@ import {
   Loader2,
   RefreshCcw,
   X,
-  // Settings,
-  // ChevronUp,
+  ChevronUp,
+  Settings,
 } from "lucide-react";
 import { useAudioQueue } from "./hooks/useAudioQueue";
 import { ChatFeed } from "./components/ChatFeed";
@@ -30,7 +30,7 @@ const App: React.FC = () => {
     status,
     text,
   } = useBroadcast(pushAudio);
-  // const [showSettings, setShowSettings] = useState<boolean>(false);
+  const [showSettings, setShowSettings] = useState<boolean>(true);
   const isPlaying = useRef<boolean>(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
   const scrollToBottom = () =>
@@ -45,6 +45,7 @@ const App: React.FC = () => {
 
     setText("");
     setImage(null);
+    if (imagePreview) URL.revokeObjectURL(imagePreview);
     setImagePreview(null);
     clearAudio();
     isPlaying.current = false;
@@ -111,6 +112,7 @@ const App: React.FC = () => {
         </div>
         <ControlCenter
           variant="sidebar"
+          showSettings={showSettings}
           {...{
             status,
             numTurns,
@@ -124,14 +126,14 @@ const App: React.FC = () => {
             handleDownloadAudio,
           }}
         />
-        <div className="sidebar-footer">MAVERICK AI</div>
+        <div className="sidebar-footer">OBSIDIAN FM</div>
       </aside>
 
       <header className="app-header">
         <div className="header-main">
           <div className="status-header" style={{ padding: 10 }}>
             <span className={`status-dot ${status}`} />
-            <span className="brand">MAVERICK AI</span>
+            <span className="brand">OBSIDIAN FM</span>
           </div>
 
           <div className="header-actions">
@@ -143,13 +145,13 @@ const App: React.FC = () => {
               <RefreshCcw size={20} />
               <span className="desktop-only">New</span>
             </button>
-            {/* <button
+            <button
               className="header-btn"
-              onClick={() => setShowSettings(!showSettings)}
+              onClick={() => setShowSettings((prev) => !prev)}
             >
               {showSettings ? <ChevronUp size={20} /> : <Settings size={20} />}
               <span className="desktop-only">Settings</span>
-            </button> */}
+            </button>
           </div>
         </div>
 
@@ -166,6 +168,7 @@ const App: React.FC = () => {
             audioChunks,
             downloadFile,
             handleDownloadAudio,
+            showSettings
           }}
         />
       </header>
@@ -181,6 +184,7 @@ const App: React.FC = () => {
                 <button
                   onClick={() => {
                     setImage(null);
+                    if (imagePreview) URL.revokeObjectURL(imagePreview);
                     setImagePreview(null);
                   }}
                 >

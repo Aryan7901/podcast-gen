@@ -9,7 +9,7 @@ export const useBroadcast = (pushAudio: (chunk: string) => void) => {
   const [numTurns, setNumTurns] = useState(4);
 
   const startPodcast = async (audioOn: boolean, image: File | null) => {
-    if (!text) return;
+    if (!text || loading) return;
     setLoading(true);
     setStatus("streaming");
     setChatHistory([]);

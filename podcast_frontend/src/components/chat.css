@@ -10,6 +10,13 @@
   padding: 40px 20px 180px 20px;
   scroll-behavior: smooth;
 }
+@media (max-width: 768px) {
+  .chat-feed {
+    padding: 20px 12px 140px 12px;
+    flex: 1;
+    min-height: 0;
+  }
+}
 /* Specifically for the chat-feed to make it look cleaner */
 .chat-feed::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.1);
@@ -26,6 +33,7 @@
   justify-content: center;
   opacity: 0.1;
   letter-spacing: 0.2em;
+  min-height: 300px;
 }
 
 .message-wrapper {
@@ -34,6 +42,11 @@
   justify-content: center;
   padding: 32px 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+@media (max-width: 768px) {
+  .message-wrapper {
+    padding: 18px 12px;
+  }
 }
 .message-wrapper.alex-turn {
   background: linear-gradient(

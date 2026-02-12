@@ -33,4 +33,5 @@ export interface ControlProps {
   audioChunks: string[];
   downloadFile: (blob: Blob, name: string) => void;
   handleDownloadAudio: () => void;
+  showSettings: boolean;
 }

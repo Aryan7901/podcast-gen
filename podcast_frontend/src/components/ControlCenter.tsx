@@ -15,6 +15,7 @@ export const ControlCenter: React.FC<ControlProps> = ({
   audioChunks,
   downloadFile,
   handleDownloadAudio,
+  showSettings
 }) => {
   const isSidebar = variant === "sidebar";
 
@@ -27,7 +28,7 @@ export const ControlCenter: React.FC<ControlProps> = ({
   };
 
   return (
-    <div className={isSidebar ? "sidebar-content" : "settings-grid"}>
+    <div className={isSidebar ? "sidebar-content" : `settings-grid  ${showSettings ? "settings-open" : ""}`}>
       {/* 1. Reset Button (Only needed inside the mobile drawer or top of sidebar) */}
       {isSidebar && (
         <button className="new-podcast-btn" onClick={resetState}>
