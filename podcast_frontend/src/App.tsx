@@ -143,13 +143,13 @@ const App: React.FC = () => {
               <RefreshCcw size={20} />
               <span className="desktop-only">New</span>
             </button>
-            <button
+            {/* <button
               className="header-btn"
               onClick={() => setShowSettings(!showSettings)}
             >
               {showSettings ? <ChevronUp size={20} /> : <Settings size={20} />}
               <span className="desktop-only">Settings</span>
-            </button>
+            </button> */}
           </div>
         </div>
 
