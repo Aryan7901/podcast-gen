@@ -16,7 +16,7 @@ async def generate_wav_chunk(text: str, speaker: str, should_generate: bool, api
     if not should_generate or not text:
         return ""
     
-    voice_id = "sarah" if speaker in ["JAMIE", "JAMIE_OUTRO"] else "theo"
+    voice_id = "theo" if speaker =="ALEX" else "sarah"
     # Using pcm_16000 for seamless concatenation/streaming
     url = f"https://preview.tts.speechmatics.com/generate/{voice_id}?output_format=wav_16000"
     headers = {"Authorization": f"Bearer {api_key}"}

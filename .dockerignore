@@ -7,4 +7,6 @@ __pycache__/
 node_modules/
 custom_models
 podcast_train.ipynb
-podcast_frontend
+podcast_frontend/
+training_data/
+podcast-gen.tar
