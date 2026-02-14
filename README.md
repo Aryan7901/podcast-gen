@@ -64,7 +64,7 @@ An AI-powered podcast generator that turns any topic or image into a full two-ho
 ### Prerequisites
 
 - Node.js 18+
-- Python 3.11
+- Python 3.12
 - A [Groq](https://console.groq.com) API key
 - A [Speechmatics](https://portal.speechmatics.com) API key (for audio)
 
