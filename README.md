@@ -1,4 +1,4 @@
-# 🎙️ Wavelength — AI Podcast Generator
+# 🎙️ ObsidianFM — AI Podcast Generator
 > Built by [Aryan Shetty](https://github.com/Aryan7901)
 > Live Link: [https://podcast-gen-gray.vercel.app](https://podcast-gen-gray.vercel.app)
 An AI-powered podcast generator that turns any topic or image into a full two-host conversation, complete with streaming audio. Just type a topic, hit send, and get a real podcast with two distinct voices — **Jamie** (the expert) and **Alex** (the curious one).
